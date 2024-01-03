@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+ model Course {
+  id    Int @id @default(autoincrement())
+  name  String @default("none")
+  coursePhotoUrl  String @default("No photo url here")
+  instructor  String @default("No name")
+  description  String @default("no description")
+  enrollmentStatus  String @default("no enrollment status")
+  schedule  String @default("no schedule")
+  location  String @default("no location")  
+
+ }
