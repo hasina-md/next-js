@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { Button } from '@/ui/index'
 
 
 export async function getData () {
@@ -15,7 +16,7 @@ export default async function Home () {
         <main>
             <h2> Welcome to Next-Js with courses as it is included with prisma</h2>
             <pre>{JSON.stringify(courseLit, null, 2)}</pre>
-           
+            <Button variant="filled">Click Me</Button>
         </main>
     )
 }
