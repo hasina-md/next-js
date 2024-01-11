@@ -1,6 +1,7 @@
 'use client';
-import { Button } from "@material-tailwind/react";
+import { Button, Card, CardBody, Typography, CardFooter, CardHeader } from "@material-tailwind/react";
 
 export {
-    Button
+    Button,
+    Card, CardBody, Typography, CardFooter, CardHeader 
 }

@@ -1,5 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { Button } from '@/ui/index'
+import CourseCard from "@/ui/courses/CourseCard";
+import CourseList from "@/ui/courses/CourseList";
 
 
 export async function getData () {
@@ -11,12 +13,13 @@ export async function getData () {
 }
 
 export default async function Home () {
-    const courseLit = await getData();
+    const courseList = await getData();
     return (
-        <main>
-            <h2> Welcome to Next-Js with courses as it is included with prisma</h2>
-            <pre>{JSON.stringify(courseLit, null, 2)}</pre>
+        <section>
+            <h2> Welcome to Next-Js with courses as it is included with prisma</h2>  
+            <CourseList/>
+            <CourseCard className="p-6 gap-4" />
             <Button variant="filled">Click Me</Button>
-        </main>
+        </section>
     )
 }
